@@ -14,12 +14,13 @@ namespace Projectile
 		[SerializeField] private float _speedFly = 20f;
 		[SerializeField] private int _damage = 10;
 
-		public virtual void InitProjectile(Vector3 startP, Vector3 endP, Monster enemy)
+		public virtual void InitProjectile(Vector3 startP, Vector3 endP, Monster enemy, int damage)
 		{
 			_targetEnemy = enemy;
 			_startFly = startP;
 			_endFly = endP;
 			_maxTimeFly = GetTimeFly(startP, endP);
+			_damage = damage;
 		}
 
 		void Update()

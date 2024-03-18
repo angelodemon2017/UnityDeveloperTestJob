@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
-using Monstrs;
 
 public class Monster : MonoBehaviour
 {

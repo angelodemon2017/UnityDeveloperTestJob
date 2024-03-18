@@ -321,7 +321,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -374,7 +374,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -4828,6 +4828,7 @@ GameObject:
   - component: {fileID: 3307880}
   - component: {fileID: 2306940}
   - component: {fileID: 6562086}
+  - component: {fileID: 3695264740793045767}
   m_Layer: 0
   m_Name: Cannon_L1
   m_TagString: Untagged
@@ -4844,7 +4845,7 @@ Transform:
   m_GameObject: {fileID: 143952}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 131.67455, y: 0.0000009536743, z: 66.83645}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4922,6 +4923,26 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.8755227, y: 0.5754513, z: 1.8755226}
   m_Center: {x: 0.000000059604645, y: 0.2880909, z: 0.00000014901161}
+--- !u!114 &3695264740793045767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ba74de831c961049bfde3918fe5fec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pointType: 1
+  _shootInterval: 0.5
+  _minRange: 2
+  _range: 40
+  projectile: {fileID: 11464742, guid: 4124357cfe121804f9eea0a690ce3b52, type: 3}
+  _shootPoint: {fileID: 3545590779709273771}
+  _speedRotate: 2
+  _cannonTower: {fileID: 411128}
 --- !u!1 &145142
 GameObject:
   m_ObjectHideFlags: 0
@@ -5061,6 +5082,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 479186}
+  - {fileID: 3545590779709273771}
   m_Father: {fileID: 411128}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3339788
@@ -5136,3 +5158,34 @@ CapsuleCollider:
   m_Height: 4.5
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.25}
+--- !u!1 &3312274617157845985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3545590779709273771}
+  m_Layer: 0
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3545590779709273771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3312274617157845985}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00000006556708, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.00083351135, y: 0.040000558, z: 1.7099999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 468134}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -24,7 +24,7 @@ public class Spawner : MonoBehaviour
 
 	private void Spawn()
 	{
-		var newMonster = Instantiate(monsterPrefab, _spawnPosition.position, Quaternion.identity);
+		var newMonster = Instantiate(monsterPrefab, _spawnPosition.position, Quaternion.identity, transform);
 		newMonster.Init(_moveTarget);
 		MonstersController.Instance.AddMonster(newMonster);
 	}

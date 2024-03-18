@@ -244,7 +244,7 @@ Transform:
   m_GameObject: {fileID: 159708}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.42, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -334,12 +334,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ba74de831c961049bfde3918fe5fec2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pointType: 1
   _shootInterval: 0.5
-  _speedRotate: 2
   _minRange: 2
   _range: 40
-  cannonProjectile: {fileID: 11464742, guid: 4124357cfe121804f9eea0a690ce3b52, type: 3}
+  projectile: {fileID: 11464742, guid: 4124357cfe121804f9eea0a690ce3b52, type: 3}
   _shootPoint: {fileID: 8825861058894295268}
+  _speedRotate: 2
   _cannonTower: {fileID: 446918}
 --- !u!1 &190336
 GameObject:
