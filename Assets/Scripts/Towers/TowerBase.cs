@@ -21,7 +21,7 @@ namespace Towers
         [SerializeField] protected ProjectileBase projectile;
         [SerializeField] protected Transform _shootPoint;
         [SerializeField] private Tower _tower;
-        public int _index;
+//        public int _index;
 
         protected Monster _monsterInFocus;
         private StateTower _stateTower;
@@ -36,10 +36,10 @@ namespace Towers
             RunState();
         }
 
-        public void Init(Tower tower, int index)
+        public void Init(Tower tower)//, int index)
         {
             _tower = tower;
-            _index = index;
+//            _index = index;
         }
 
         private void RunState()

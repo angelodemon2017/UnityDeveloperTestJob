@@ -19,7 +19,6 @@ namespace Towers
         }
 
         private List<Tower> Towers = new();
-        private int SelectTower;
         private Tower _focusTower;
 
         public void SelectedTower(Tower focusTower)
@@ -29,22 +28,18 @@ namespace Towers
 
         public void OnBuildTower(TowerType towerType)
         {
-//            Towers[SelectTower].SelectType(towerType);
             _focusTower.SelectType(towerType);
         }
 
         public void Upgrade()
         {
-//            Towers[SelectTower].Upgrade();
             _focusTower.Upgrade();
         }
 
-        public (Tower, int) InitTower()
+        public Tower InitTower()
         {
-            (Tower, int) newTower;
-            newTower.Item1 = new();
-            newTower.Item2 = Towers.Count;
-            Towers.Add(newTower.Item1);
+            Tower newTower = new();
+            Towers.Add(newTower);
             return newTower;
         }
     }

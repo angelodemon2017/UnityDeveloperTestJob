@@ -1,5 +1,4 @@
 using TowerConfig;
-using Towers;
 using UnityEngine;
 
 public class StartUp : MonoBehaviour
@@ -9,8 +8,6 @@ public class StartUp : MonoBehaviour
     public ModelConfig modelConfig;
     public GameplayConfig GameplayConfig;
 
-    //    public TowersController TowersController = new();
-
     private void Awake()
     {
         if (Instance == null)
@@ -18,7 +15,10 @@ public class StartUp : MonoBehaviour
             Instance = this;
         }
         DontDestroyOnLoad(gameObject);
+    }
 
+    private void Start()
+    {
         WindowController.Instance.OpenWindow(Windows.MainWindow);
     }
 }

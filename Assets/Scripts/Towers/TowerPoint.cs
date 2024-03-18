@@ -8,13 +8,11 @@ namespace Towers
         [SerializeField] private Transform _root;
         public Tower _tower;
         private TowerBase towerBase;
-        public int indexTower;
 
         private void Awake()
         {
             var newT = TowersController.Instance.InitTower();
-            _tower = newT.Item1;
-            indexTower = newT.Item2;
+            _tower = newT;
             _tower.UpdateTower += UpdateTowerPoint;
         }
 
@@ -26,7 +24,7 @@ namespace Towers
 
             towerBase = Instantiate(StartUp.Instance.modelConfig.GetWeaponTowerModel(pointType, _tower.Level - 1), fundament.GetPointWeapon);
 
-            towerBase.Init(_tower, indexTower);
+            towerBase.Init(_tower);
         }
 
         private void OnMouseDown()
